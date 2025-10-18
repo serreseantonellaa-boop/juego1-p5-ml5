@@ -35,6 +35,9 @@ let looseSound;
 let mostrarWin = false;
 let winSound;
 
+//sonido ambiente
+let ambiente;
+
 
 //puntajes
 let puntaje = 0;
@@ -50,6 +53,7 @@ function preload() {
   gostSound = loadSound('assets/sound/gost.mp3')
   winSound =  loadSound('assets/sound/win2.mp3')
   looseSound = loadSound('assets/sound/loose.mp3')
+  ambiente = loadSound('assets/sound/ambiente1.mp3')
 }
 
 function setup() {
@@ -71,6 +75,7 @@ function setup() {
   textAlign(CENTER);
   textFont(fuente);
   rectMode(CENTER);
+  ambiente.play()
 }
 
 function draw() {
